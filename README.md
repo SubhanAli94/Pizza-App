@@ -1,4 +1,4 @@
-# pizza_app
+# Pizza App
 
 A new Flutter project.
 
