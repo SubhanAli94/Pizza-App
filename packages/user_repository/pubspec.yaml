@@ -1,5 +1,5 @@
-name: pizza_app
-description: "A new Flutter project."
+name: user_repository
+description: "The repo that handles users."
 publish_to: 'none'
 
 version: 1.0.0+1
