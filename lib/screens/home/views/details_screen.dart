@@ -60,7 +60,7 @@ class DetailsScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            '\$20',
+                            '\$21',
                             style: TextStyle(
                                 color: Colors.grey,
                                 decoration: TextDecoration.lineThrough,
