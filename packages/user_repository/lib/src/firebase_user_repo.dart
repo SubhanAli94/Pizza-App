@@ -12,11 +12,11 @@ class FirebaseUserRepo implements UserRepository {
 
   @override
   Stream<MyUser?> get user {
-    return _firebaseAuth.authStateChanges().flatMap((firebaseuser) async* {
-      if (firebaseuser == null) {
+    return _firebaseAuth.authStateChanges().flatMap((firebaseUser) async* {
+      if (firebaseUser == null) {
         yield MyUser.empty;
       } else {
-        await userCollection.doc(firebaseuser.uid).get().then((value) =>
+        yield await userCollection.doc(firebaseUser.uid).get().then((value) =>
             MyUser.fromEntity(MyUserEntity.fromDocument(value.data()!)));
       }
     });
