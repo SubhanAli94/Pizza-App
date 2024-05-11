@@ -18,5 +18,5 @@ class SignInRequired extends SignInEvent {
 class SignOutRequired extends SignInEvent {
   @override
   // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
