@@ -63,7 +63,8 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute<void>(
-                                builder: (context) => const DetailsScreen()));
+                                builder: (context) =>
+                                    DetailsScreen(pizza: state.pizzas[i])));
                       },
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,7 +100,12 @@ class HomeScreen extends StatelessWidget {
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.green.withOpacity(0.1),
+                                      color: state.pizzas[i].spicy == 1
+                                          ? Colors.green.withOpacity(0.1)
+                                          : state.pizzas[i].spicy == 2
+                                              ? Colors.orange.withOpacity(0.1)
+                                              : Colors.redAccent
+                                                  .withOpacity(0.1),
                                       borderRadius:
                                           BorderRadius.circular(12.0)),
                                   child: Padding(
